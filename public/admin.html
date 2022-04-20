@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Admin | Dashboard</title>
+</head>
+<body>
+  <a href="/"><img src="img/dark-logo.png" class="logo" alt=""></a>
+    <div class="container">
+        <header>
+          <h3>Заявки за партньорство</h3>
+        </header>
+        <div class="table-wrapper">
+          <table class="table" id="table-requests">
+            <tr>
+              <th>Email</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Number Subscribers</th>
+              <th>Phone number</th>
+              <th class="profile-pic">Profile Pic</th>
+            </tr>
+          </table>
+          <label for="id">Enter email</label>
+          <form class="update">
+            <input type="text" name="id" class="id" required>
+          </form>
+            <button class="update-btn btn" name="updateBtnRequests">Approve request</button>
+            <button class="delete-btn btn" name="deleteBtnRequests">Deny request</button>
+        </div>
+    </div> 
+    <div class="container">
+      <header>
+        <h3>Парньори</h3>
+      </header>
+      <div class="table-wrapper">
+        <table class="table" id="table-sellers">
+          <tr>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Number Subscribers</th>
+            <th>Phone number</th>
+            <th class="profile-pic">Profile Pic</th>
+          </tr>
+        </table>
+        <label for="id">Enter email</label>
+        <form class="update">
+          <input type="text" name="id" class="id" required>
+        </form>
+          <button class="update-btn btn" name="updateBtnRequests">Approve request</button>
+          <button class="delete-btn btn" name="deleteBtnRequests">Deny request</button>
+      </div>
+  </div>   
+
+      <script type="module">
+           import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
+            const firebaseConfig = {
+                apiKey: "AIzaSyC8GkIxsh665RJ4pTdBSuE9dRdkTnLawdM",
+                authDomain: "infloshop.firebaseapp.com",
+                databaseURL: "https://infloshop-default-rtdb.europe-west1.firebasedatabase.app",
+                projectId: "infloshop",
+                storageBucket: "infloshop.appspot.com",
+                messagingSenderId: "451241364813",
+                appId: "1:451241364813:web:c946cb6c604da7396e3b04"
+            };
+
+            import { getFirestore, doc, getDoc, getDocs, onSnapshot, collection, updateDoc }
+                from "https://www.gstatic.com/firebasejs/9.6.4/firebase-firestore.js"
+            const app = initializeApp(firebaseConfig);
+            const db = getFirestore();
+      </script>
+      <script type="module" src="js/admin.js"></script>
+</body>
+</html>

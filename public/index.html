@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infloshop</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <nav class="navbar"></nav>
+
+    <header class="hero-section">
+        <div class="content">
+            <img src="img/dark-logo.png" class="logo" alt="">
+            <p class="sub-heading">All influencers in one place</p>
+        </div>
+    </header>
+
+    <!-- <section id="men-tshirt-products"></section> -->
+
+    <section class="become-part-of-us" >
+        <h3>Стани част от нас</h3>
+        <p class="text-info">
+            Ако ти си инфлуенсър или човек с определена група от хора, които те следват и искаш да продаваш своя мърчъндайз, не се притеснявай да станеш част от нас.
+            Попълни кратката ни форма и очаквай отговор в най-кратък срок!
+        </p>
+        <button class="btn-seller" id="become-seller">Присъедини се</button>
+    </section>
+    <hr >
+    <h1 class="header-shops" id="shop">Нашите инфлуенсъри</h1>
+    <div class="inflo" >
+        
+
+    </div>
+
+    <footer></footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
+         const firebaseConfig = {
+             apiKey: "AIzaSyC8GkIxsh665RJ4pTdBSuE9dRdkTnLawdM",
+             authDomain: "infloshop.firebaseapp.com",
+             databaseURL: "https://infloshop-default-rtdb.europe-west1.firebasedatabase.app",
+             projectId: "infloshop",
+             storageBucket: "infloshop.appspot.com",
+             messagingSenderId: "451241364813",
+             appId: "1:451241364813:web:c946cb6c604da7396e3b04"
+         };
+
+         import { getFirestore, doc, getDoc, getDocs, onSnapshot, collection, updateDoc }
+             from "https://www.gstatic.com/firebasejs/9.6.4/firebase-firestore.js"
+         const app = initializeApp(firebaseConfig);
+         const db = getFirestore();
+   </script>
+   <script src="js/home.js"></script>
+   <script type="module" src="js/index.js"></script>
+
+    <script>
+        // getProducts('t-shirt').then(data => createProductSlider(data, '#men-tshirt-products', 'Men T-shirt'))
+        
+        //getInfluencers();
+        // getProducts('t-shirt').then(data => createProductSlider(data, '#men-tshirt-products-2', 'Men T-shirt'))
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/seller.css">
+
+</head>
+<body>
+    
+    <img src="img/loader.gif" class="loader" alt="">
+
+    <div class="alert-box">
+        <img src="img/error.png" class="alert-img" alt="">
+        <p class="alert-msg">Error message</p>
+    </div>
+
+    <img src="img/dark-logo.png" class="logo" alt="">
+
+    <div class="become-seller hide">
+        <p class="heading">Стани част от Infloshop</p>
+        <p class="des">
+            Ако ти си човек с определен брой последователи в социалните мрежи и искаш да пуснещ свой мърчъндайз на пазара ние ще ти помогнем. Попълни формата ни и ако отговаряш
+            на нашите изисквания ти ще се присъединиш към екипа на Infloshop и ще можеш да споделяш, редактираш и изтриваш твоите продукти по всяко време. Не се колебай, а попълни
+            формата сега!
+        </p>
+            <button class="btn" id="apply-btn">Кандидатствай тук</button>
+    </div>
+
+    <div class="apply-form hide">
+        <input type="text" id="business-name" placeholder="Бизнес име / Име на компания / Име на магазин">
+        <textarea id="business-add" placeholder="Адрес"></textarea>
+        <textarea id="about" placeholder="Разкажи ни за теб и твоите последователи"></textarea>
+        <input type="text" id="number-subs" placeholder="Брой последователи">
+        <input type="text" id="number" placeholder="Телефонен номер">
+        <div class="upload-image-sec">
+            <div class="upload-catalouge">
+                <h1>Качи профилна снимка на магазина</h1>
+                <input type="file" class="fileupload" id="first-file-upload-btn" hidden>
+                <label for="first-file-upload-btn" id="img-upload" class="upload-image "></label>
+            </div>
+        </div>
+        <input type="checkbox" checked class="checkbox" id="terms-and-cond">
+        <label for="terms-and-cond">agree to our <a href="#">terms and conditions</a></label>
+        <br>
+        <input type="checkbox" checked class="checkbox" id="legitInfo">
+        <label for="legitInfo">Всичката информация е достоверна</a></label>
+        <button class="submit-btn" id="apply-form-btn">apply</button>
+    </div>
+
+    <div class="product-listing hide">
+        <div class="add-product">
+            <p class="add-product-title">add product</p>
+            <button class="btn" onclick="location.href = '/add-product'">add product</button>
+        </div>
+        <img src="img/no-products.png" class="no-product-image hide" alt="">
+
+        <!-- delete alert -->
+        <div class="delete-alert">
+            <div class="alert">
+                <button class="close-btn"><img src="img/close.png" alt=""></button>
+                <img src="img/delete-warning.png" class="delete-svg" alt="">
+                <p class="text">are you sure ? you want to delete this product</p>
+                <button class="delete-btn">delete</button>
+            </div>
+        </div>
+
+        <!-- cards -->
+        <div class="product-container">
+            <!-- <div class="product-card">
+                <div class="product-image">
+                    <span class="tag">draft</span>
+                    <img src="img/card9.png" class="product-thumb" alt="">
+                    <button class="card-action-btn edit-btn"><img src="img/edit.png" alt=""></button>
+                    <button class="card-action-btn open-btn"><img src="img/open.png" alt=""></button>
+                    <button class="card-action-btn delete-popup-btn"><img src="img/delete.png" alt=""></button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-des">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div> -->
+        </div>
+
+    </div>
+
+    <script src="js/token.js"></script>
+    <script src="js/createProduct.js"></script>
+    <script src="js/seller.js"></script>
+
+</body>
+</html>
