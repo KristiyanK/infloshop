@@ -5,8 +5,8 @@
 
 .four-0-four-msg{
     text-align: center;
-    text-transform: capitalize;
     color: #383838;
+    text-transform: none; 
 }
 
 .four-0-four-msg a{

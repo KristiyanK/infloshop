@@ -39,13 +39,15 @@ header h3 {
   width: 90%;
   margin: 2rem auto;
   border-collapse: collapse;
+  
 }
 
-.table th, .table-users td {
+.table th, .table-users td, tr {
   text-align: left;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding: .5rem;
+  text-align: center;
 }
 
 .table th {

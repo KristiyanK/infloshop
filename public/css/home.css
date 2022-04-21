@@ -5,6 +5,10 @@ html {
     scroll-behavior: smooth;
   }
 
+p{
+ text-transform: none !important;
+}
+
 .become-part-of-us{
     padding: 20px;
     display: block;

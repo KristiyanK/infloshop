@@ -3,17 +3,17 @@ const createNav = ()=>{
 
     nav.innerHTML = `
     <div class="nav">
-        <img src="../img/dark-logo.png" class="brand-logo" alt="">
+        <a href="/"><img src="../img/dark-logo.png" class="brand-logo" alt=""></a>
             <div class="nav-items">
                 <div class="search">
-                    <input type="text" class="search-box" id="search-box" placeholder="search influencer, product, etc">
-                    <button class="search-btn" id="search-btn">Search</button>
+                    <input type="text" class="search-box" id="search-box" placeholder="Търси инфлуенсър, продукт или нещо друго..">
+                    <button class="search-btn" id="search-btn">Търси</button>
                 </div>
                 <a>
                     <img src="../img/user.png" id="user-img" alt="">
                     <div class="login-logout-popup hide">
-                        <p class="account-info">Log in as, name</p>
-                        <button class="btn" id="user-btn">Log out</button>
+                        <p class="account-info">Здравей, име</p>
+                        <button class="btn" id="user-btn">Изход</button>
                     </div>
                 </a>
                 <a href="/cart"><img src="../img/cart.png" alt=""></a>
@@ -52,8 +52,8 @@ window.onload = () => {
         //means user is logged in
         loginLink.classList.add('hideLinks')
         registerLink.classList.add('hideLinks')
-        popuptext.innerHTML = `log in as, ${user.name}`;
-        actionBtn.innerHTML = 'log out';
+        popuptext.innerHTML = `Здравей, ${user.name}`;
+        actionBtn.innerHTML = 'Изход';
         actionBtn.addEventListener('click', () => {
             sessionStorage.clear();
             location.reload();
@@ -68,8 +68,8 @@ window.onload = () => {
         //user is logged out
         loginLink.classList.remove('hideLinks')
         registerLink.classList.remove('hideLinks')
-        popuptext.innerHTML = 'log in to place order';
-        actionBtn.innerHTML = 'log in';
+        popuptext.innerHTML = 'Влез за да направиш поръчка';
+        actionBtn.innerHTML = 'Вход';
         actionBtn.addEventListener('click', () => {
             location.href = '/login';
         })
