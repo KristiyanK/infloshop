@@ -81,3 +81,30 @@ async function aproveRequest() {
     await driver.findElement(By.name("updateBtnRequests")).click();
 }
 //aproveRequest()
+
+async function completeOrder() {
+    let driver = await new Builder().forBrowser("firefox").build();
+    await driver.get("http://localhost:3000/");
+    await driver.findElement(By.id("login")).click();
+    await driver.findElement(By.id("email")).sendKeys("kristiyankonov99@gmail.com");
+    await driver.findElement(By.id("password")).sendKeys("kriskris");
+    await driver.findElement(By.id("loginBtn")).click();
+    await driver.sleep(1000);
+    await driver.findElement(By.id("inflohome")).click();
+    await driver.sleep(1500);
+    await driver.findElement(By.id("Stella")).click();
+    await driver.sleep(2500);
+    await driver.findElement(By.id("story is my life-2719")).click();
+    await driver.sleep(1000);
+    await driver.findElement(By.id("addBtn")).click();
+    await driver.findElement(By.id("cart")).click();
+    await driver.findElement(By.id("checkout")).click();
+    await driver.findElement(By.id("address")).sendKeys("Ruse");
+    await driver.findElement(By.id("street")).sendKeys("Vasil Levski");
+    await driver.findElement(By.id("city")).sendKeys("Ruse");
+    await driver.findElement(By.id("state")).sendKeys("Ruse");
+    await driver.findElement(By.id("pincode")).sendKeys("7000");
+    await driver.findElement(By.id("place-btn")).click();
+}
+
+completeOrder();

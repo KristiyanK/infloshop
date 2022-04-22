@@ -16,7 +16,7 @@ const createNav = ()=>{
                         <button class="btn" id="user-btn">Изход</button>
                     </div>
                 </a>
-                <a href="/cart"><img src="../img/cart.png" alt=""></a>
+                <a href="/cart" id="cart"><img src="../img/cart.png" alt=""></a>
             </div>
     </div>
     <ul class="links-contrainer">
