@@ -75,9 +75,9 @@ uploadImages.forEach((fileupload, index) => {
 
 applyFormButton.addEventListener('click', () => {
     if(!businessName.value.length || !address.value.length || !about.value.length || !number.value.length || !numberSubs.value.length){
-        showAlert('fill all the inputs');
+        showAlert('Попълни всички полета');
     } else if(!tac.checked || !legitInfo.checked){
-        showAlert('you must agree to our terms and conditions');
+        showAlert('Трябва да се съгласиш с нашите условия за ползване');
     } else{
         //making server request
         loader.style.display = 'block';

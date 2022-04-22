@@ -1,5 +1,6 @@
 const tableRequests = document.querySelector('#table-requests');
 const tableSellers = document.querySelector('#table-sellers');
+const tableUsers = document.querySelector('#table-users');
 
 import { getFirestore, doc, getDoc, setDoc, addDoc, getDocs, onSnapshot, collection, updateDoc, deleteDoc }
                 from "https://www.gstatic.com/firebasejs/9.6.4/firebase-firestore.js";
@@ -17,7 +18,7 @@ window.onload = doc => {
 }
 
 // Create element and render users
-const renderUser = doc => {
+const renderSellers = doc => {
   const tr = `
     <tr data-id='${doc.email}'>
       <td>${doc.data().email}</td>
@@ -31,17 +32,35 @@ const renderUser = doc => {
   return tr;
 }
 
+const renderUser = doc => {
+  const tr = `
+    <tr data-id='${doc.email}'>
+      <td>${doc.data().email}</td>
+      <td>${doc.data().name}</td>
+      <td>${doc.data().number}</td>
+      <td>${doc.data().role}</td>
+    </tr>
+  `;
+  return tr;
+}
+
 const querySnapshot = await getDocs(collection(db, "sellerReq"));
       window.onload = querySnapshot.forEach((doc) => {
-            const tr=renderUser(doc);
+            const tr=renderSellers(doc);
             tableRequests.insertAdjacentHTML('beforeend', tr);
         });
+
 const querySnapshot_2 = await getDocs(collection(db, "seller"));
       window.onload = querySnapshot_2.forEach((doc) => {
-        const tr=renderUser(doc);
+        const tr=renderSellers(doc);
         tableSellers.insertAdjacentHTML('beforeend', tr);
         });
-       
+  
+const querySnapshot_3 = await getDocs(collection(db, "users"));
+        window.onload = querySnapshot_3.forEach((doc) => {
+          const tr = renderUser(doc);
+          tableUsers.insertAdjacentHTML('beforeend', tr);
+        });
        
 const updateForm = document.querySelector('.update');
 const updateBtn = document.querySelector('.update-btn');

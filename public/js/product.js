@@ -92,7 +92,7 @@ const fetchProductData = () => {
     .then(res => res.json())
     .then(data => {
         setData(data);
-        getProducts(data.tags[1]).then(data => createProductSlider(data, '.container-for-card-slider', 'similar products'))
+        getProducts(data.tags[1]).then(data => createProductSlider(data, '.container-for-card-slider', 'Подобни продукти'))
     })
     .catch(err => {
         location.replace('/404')

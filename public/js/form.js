@@ -21,17 +21,17 @@ const notification = document.querySelector('#notification') || null;
 submitBtn.addEventListener('click', () => {
     if(name != null){//signup page
         if(name.value.length < 3){
-            showAlert('name must be 3 letters long'); 
+            showAlert('Името трябва да е поне 3 символа'); 
         } else if(!email.value.length){
-            showAlert('enter your email');
+            showAlert('Въведи имейл');
         } else if(password.value.length < 8){
-            showAlert('password shoud be 8 letters long');
+            showAlert('Паролата трябва да е поне 8 символа');
         } else if(!number.value.length){
-            showAlert('enter your phone number');
+            showAlert('Въведи телефонния си номер');
         } else if(!Number(number.value) || number.value.length < 10){
-            showAlert('invalid number, please enter valid one');
+            showAlert('Невалиден телефонен номер');
         } else if(!tac.checked){
-            showAlert('you muse agree to our terms and conditions');
+            showAlert('Трябва да се съгласиш с нашите условия за ползване');
         } else{
             //submit form
             loader.style.display = 'block';
@@ -48,7 +48,7 @@ submitBtn.addEventListener('click', () => {
     }else{
         //login page
         if(!email.value.length || !password.value.length){
-            showAlert('fill all the inputs');
+            showAlert('Въведи всички полета');
         }else{
             loader.style.display = 'block';
             sendData('/login', {

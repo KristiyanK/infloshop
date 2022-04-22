@@ -19,7 +19,7 @@ placeOrderBtn.addEventListener('click', () => {
             })
         }).then(res => res.json())
         .then(data => {
-            if(data.alert == 'your order is placed'){
+            if(data.alert == 'Вашата поръчка е приета успешно'){
                 delete localStorage.cart;
                 showAlert(data.alert, 'success');
             }
@@ -40,7 +40,7 @@ const getAddress = () => {
     //let landmark = document.querySelector('#landmark').value;
 
     if(!address.length || !street.length || !city.length || !state.length || !pincode.length ){
-        return showAlert('fill all the inputs first');
+        return showAlert('Попълни всички полета');
     }
     else{
         return {address, street, city, state, pincode};

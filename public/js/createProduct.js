@@ -14,7 +14,7 @@ const createProduct = (data) => {
         <div class="product-info">
             <h2 class="product-brand">${data.name}</h2>
             <p class="product-short-des">${data.shortDes}</p>
-            <span class="price">$${data.sellPrice}</span><span class="actual-price">$${data.actualPrice}</span>
+            <span class="price">${data.sellPrice}лв.</span><span class="actual-price">${data.actualPrice}лв.</span>
         </div>
     </div>
     `;

@@ -94,31 +94,31 @@ const storeSizes = () => {
 
 const validateForm = () => {
     if(!productName.value.length){
-        return showAlert('enter product name');
+        return showAlert('Въведи име на продукт');
     }
     else if(shortLine.value.length > 100 || shortLine.value.length < 10){
-        return showAlert('short description must be between 10 to 100 letters long');
+        return showAlert('Кратката информация трябва да е между 10 и 100 символа');
     }
     else if(!des.value.length){
-        return showAlert('enter detail description about the product');
+        return showAlert('Въведи описание на продукта');
     }
     else if(!imagePaths.length){ //image link array
-        return showAlert('upload at least one product image');
+        return showAlert('Качи поне една снимка на продукта');
     }
     else if(!sizes.length){ //sizes array
-        return showAlert('sekect at least one size');
+        return showAlert('Избери поне един размер');
     }
     else if(!actualPrice.value.length || !discount.value.length || !sellingPrice.value.length){
-        return showAlert('you must add pricings');
+        return showAlert('Трябва да добавиш цени');
     }
     else if(stock.value < 20){
-        return showAlert('you should have at least 20 items in stock');
+        return showAlert('Трябва да имаш поне 20 на склад.');
     }
     else if(!tags.value.length){
-        return showAlert('enter few tags to help ranking your product in search');
+        return showAlert('Въведи няколко тага.');
     }
     else if(!tac.checked){
-        return showAlert('you must agree to our terms and conditions');
+        return showAlert('Трябва да се съгласиш с нашите условия за ползване');
     }
     return true;
 }

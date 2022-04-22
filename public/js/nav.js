@@ -21,7 +21,7 @@ const createNav = ()=>{
     </div>
     <ul class="links-contrainer">
         <li class="link-item" id="home"><a href="/" class="link">Начало</a></li>
-        <li class="link-item" id="inflohome"><a href="#shop" class="link">Инфлуенсъри</a></li>
+        <li class="link-item" id="inflohome"><a href="/#shop" class="link">Инфлуенсъри</a></li>
         <li class="link-item" id="login"><a href="/login" class="link">Вход</a></li>
         <li class="link-item" id="register"><a href="/signup" class="link">Регистрация</a></li>
         <li class="link-item"><a href="/seller" class="link hideLinks" id="profile">Профил</a></li>

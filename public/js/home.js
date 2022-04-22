@@ -64,7 +64,7 @@ const createProductCards = (data, parent) => {
                 <div class="product-info">
                     <h2 class="product-brand">${data[i].name}</h2>
                     <p class="product-short-des">${data[i].shortDes}</p>
-                    <span class="price">$${data[i].sellPrice}</span>
+                    <span class="price">${data[i].sellPrice}лв.</span>
                 </div>
             </div>
         `
@@ -97,6 +97,6 @@ const add_product_to_cart_or_wishlist = (type, product) => {
 
     data.push(product);
     localStorage.setItem(type, JSON.stringify(data));
-    return 'added';
+    return 'Добавен';
 }
 

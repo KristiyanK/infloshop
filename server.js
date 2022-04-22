@@ -131,7 +131,7 @@ app.post('/login', (req,res) => {
     db.collection('users').doc(email).get()
     .then(user => {
         if(!user.exists){//if email does not exists
-            return res.json({'alert': 'log in email does not exists'});
+            return res.json({'alert': 'Този имейл не съществува'});
         }else{
             bcrypt.compare(password, user.data().password, (err, result) => {
                 if(result){
@@ -143,7 +143,7 @@ app.post('/login', (req,res) => {
                         role: data.role,
                     })
                 } else{
-                    return res.json({'alert': 'password is incorrect'});
+                    return res.json({'alert': 'Невалидна парола'});
                 }
             })
         }
@@ -373,7 +373,7 @@ app.post('/order', (req, res) => {
         <body>
         
             <div>
-                <h1 class="heading">dear ${email.split('@')[0]}, <span>your order is successfully placed</span></h1>
+                <h1 class="heading">Уважаеми ${email.split('@')[0]}, <span>вашата поръчка беше успешно приета!</span></h1>
                 <button class="btn">check status</button>
             </div>
             
@@ -387,9 +387,9 @@ app.post('/order', (req, res) => {
     .then(data => {
         tranporter.sendMail(mailOption, (err, info) => {console.log(err);
             if(err){
-                res.json({'alert': 'opps! Its seems like some err occured. Try again!'})
+                res.json({'alert': 'Оппс! Изглежда имаше проблем. Опитай отново!'})
             }else{
-                res.json({'alert': 'your order is placed'});
+                res.json({'alert': 'Вашата поръчка е приета успешно'});
             }
         })
     })
